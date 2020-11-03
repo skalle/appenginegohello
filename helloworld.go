@@ -55,7 +55,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 		http.NotFound(w, r)
 		return
 	}
-	fmt.Fprint(w, "Hello, World! experiment")
+	fmt.Fprint(w, "Hello, World! experiment:", os.Getenv("GIT_VERSION"))
 }
 
 // [END indexHandler]
